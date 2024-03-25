@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms Exercise</title>
+</head>
+<body>
+  <h1>Create an Account</h1>
+  <!-- Email -->
+  <div>
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter email">
+  </div>
+  <br>
+  <!-- Password -->
+  <div>
+    <label for="name">Password</label><br>
+    <input type="text" id="password" name="password" placeholder="Enter Password">
+  </div>
+  <br>
+  <!-- Age -->
+  <div>
+    <label for="age">Age</label>
+    <select name="age" id="age">
+      <option value="noselection"selected>Select Age</option>
+      <option value="young">20-30</option>
+      <option value="mid" >30-40</option>
+      <option value="adult">40-50</option>
+    </select>
+   </div>
+   <br>
+   <!-- Textarea -->
+   <div>
+    <label for="message">Tell us a little about yourself:</label><br>
+     <textarea name="tex" id="text" cols="30" rows="5" placeholder="Enter text here"></textarea>  
+   </div>
+   <br>
+   <!-- I agree -->
+   <div>
+    <input type="checkbox" name="agree" id="agree">I agree to the <a href="#" >terms of service</a>
+   </div>
+   <br>
+   <!-- Input Submit -->
+   <input type="submit" value="Sign up">
+</body>
+</html>
