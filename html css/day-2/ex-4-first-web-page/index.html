@@ -7,64 +7,48 @@
   <meta name="robots" content="NOINDEX">
   <link rel="canonical" href="https://example.com/preferred-url-here/" />
   <link rel="icon" type="image/png" href="https://example.com/favicon.png"/>
-
+  <link rel="stylesheet" href="/html css/day-2/ex-4-first-web-page/style.css">
   <title>My First Web Page</title>
-  <style>
-
-    body {
-      font-family:'Courier New', Courier, monospace;
-    }
-
-    header {
-      text-align: center;
-    }
-
-    section {
-      width: 60%;
-  padding-left: 15px;
-  margin-left: 15px;
-  float: left;
-    }
-
-    aside {
-      width: 30%;
-  padding-left: 15px;
-  margin-left: 15px;
-  float: right;
-  font-style: italic;
-  background-color: lightgray;
-    }
-
-    .call {
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
-<header>
-  <div #img-self>
-    <img src="/html css/day-2/ex-4-first-web-page/images/smaile.jpg" alt="avi" width="200" style="border-radius: 50%; ;">
-  </div>
-  <h2>Avi Israeli</h2>
-  <div #sub-header>
-    <h3>A Front-End Web Developer </h3>
-  </div>
-</header>
-<section #description>
-<p>Hi, My name is Avi and i'm a Junior Front-End Developer. <br>
-I like building and making all kinds of things - from woodcraft to websites. <br>
-I have many hobbies but mostly I like extreme sports, like surfing and mountain biking.</p>
-</section>
-<span><aside #social>
+  <aside>
+    <div #img-self>
+      <img src="/html css/day-2/ex-4-first-web-page/images/smaile.jpg" alt="avi" width="200" style="border-radius: 50%; ;">
+    </div>
+    <h2>Avi Israeli</h2>
+    <div #sub-header>
+      <h3>Front-End Developer </h3>
+    </div>
+    <nav>
+      <ul class="nav">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">SKILLS</a></li>
+        <li><a href="#">WORK</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <p>&copy; Copyright 2024 All rights reserved, <br> Made with &hearts; by Avi Israeli</p>
+    </footer>
+  </aside>
+
+<section>
+<h1>I am a Front-End Web Developer</h1>
+<p>Hi, My name is Avi and i'm a Junior Front-End Developer.</p>
+
+<span><div #social>
   <h4>Follow me on social media!</h4>
 <a href="https://www.linkedin.com/in/avi-israeli/"><img src="/html css/day-2/ex-4-first-web-page/images/linkedin-icon-2048x2048-3mmtnow6.png" alt="linkedin" width="20"></a><a href="https://www.facebook.com/avi.israeli.754"><img src="/html css/day-2/ex-4-first-web-page/images/06-facebook-512.webp" alt="fb" width="20"></a><a href="https://github.com/developer1087"><img src="/html css/day-2/ex-4-first-web-page/images/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b4ec817.2080142615351082033227.png" alt="github" width="20"></a></span>
-</aside>
+</div>
 <hr>
 <div id="image">
-  <span><img src="/html css/day-2/ex-4-first-web-page/images/bikes.jpg" alt="bikes" width="650"></span>
+  <span><img src="/html css/day-2/ex-4-first-web-page/images/bikes-removebg-preview.png" alt="bikes" width="650"></span>
 </div>
 <div class="call">
 <button><a href="tel:0544504519">Call me</a></button>
+</section>
 </div>
 </body>
 </html>
