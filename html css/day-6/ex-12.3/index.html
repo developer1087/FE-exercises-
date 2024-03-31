@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 12.3</title>
+  <style>
+     .box {
+      width: 200px;
+      height: 200px;
+      background: red;
+      position: relative;
+    }
+
+    .box::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      background: purple;
+      z-index: 1;
+    }
+
+    .box:hover::before {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      background: blue;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    BOX
+  </div>
+</body>
+</html>

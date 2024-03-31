@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 12.5</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    a:hover::after {
+      content: 'this is a tooltip';
+      background: orange;
+      color: black;
+      border-radius: 7px;
+      font-size: 9px;
+      padding: 2px;
+      text-decoration: none;
+      position: relative;
+      top: -15px;
+      left: -30px;
+    }
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad exercitationem nam iste corrupti id harum, at ut laboriosam earum repudiandae consequuntur placeat tenetur <a href="#" data-tooltip="some value"> reiciendis officia</a> enim veritatis, vitae, nobis repellat?</p>
+</body>
+</html>
