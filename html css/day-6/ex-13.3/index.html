@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/5e2f26a2d7.js" crossorigin="anonymous"></script>
+  <title>Exercise 13.3</title>
+  <style>
+    :root {
+      /* Light theme */
+      --bg-color: #f4f4f4;
+      --card-color: #999;
+      --text-btn-color: #333;
+    }
+    
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-btn-color);
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: var(--bg-color);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      background-color: var(--card-color);
+      width: 230px;
+      border-radius: 5px;
+      position: absolute;
+      text-align: left;
+      margin: 20px;
+      padding: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      box-shadow: 10px 10px 20px 1px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      top: 49.5%;
+      left: 49.5%;
+      box-shadow: 15px 15px 20px 10px rgba(0,0,0,0.3);
+    }
+
+    .buttons {
+      /* width: 200px;
+      height: 150px; */
+      /* background: #999; */
+      border-radius: 5px;
+      position: absolute;
+      margin: 5px;
+      top: 87%;
+      left: 53%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      flex-direction: row;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 50%;
+    }
+
+    button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--text-btn-color);
+      color: var(--bg-color);
+      border-radius: 5px;
+      padding: 10px;
+      margin-right: 5px;
+      box-shadow: 10px 10px 20px 1px rgba(0,0,0,0.3);
+      text-shadow: 0.1rem 0.1rem 0.2rem #f4f4f4;
+    }
+
+    button:hover {
+      position: relative;
+      top: -2px;
+      left: -2px;
+      box-shadow: 15px 15px 20px 10px rgba(0,0,0,0.3);
+    }
+
+    i {
+      color: #f4f4f4;
+      padding: 5px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="https://media.licdn.com/dms/image/D4D03AQG2UhkShSnMJQ/profile-displayphoto-shrink_200_200/0/1705750439228?e=2147483647&v=beta&t=ft0GPmnfogwvvwTGBKTSdQZy3oAbhvJ9QsMMDhAn964" alt="avi israeli">
+      <h2 class="name">Avi Israeli</h2>
+      <h4 class="title">Frontend Developer</h4>
+      <p>Creating seamless UX with modern web technologies</p>
+    </div>
+    <div class="buttons">
+      <button><i class="fa-solid fa-arrow-right-to-bracket"></i>Join Now</button>
+      <button><i class="fa-solid fa-magnifying-glass"></i>Discover</button>
+      <button><i class="fa-regular fa-address-card"></i>Contact</button>
+    </div>
+  </div>
+</body>
+</html>
