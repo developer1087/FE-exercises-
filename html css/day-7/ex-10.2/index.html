@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 10.2</title>
+    <style>
+      html {
+        font-size: 18px;
+      }
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .outer-container {
+        display: block;
+        font-size: 10px;
+      }
+
+
+      .inner-container {
+        display: flex;
+      }
+
+      .fixed-width1 {
+        width: 350px;
+        background: #f5f5f5;
+        border: 1px solid #333;
+        padding: 20px;
+        font-size: 1.5em;
+
+      }
+
+      .fixed-width1 p {
+      }
+      .fixed-width2 {
+        width: 350px;
+        background: #f5f5f5;
+        border: 1px solid #333;
+        padding: 20px;
+        font-size: 1.5rem;
+      }
+
+      .vw-container {
+        width: 350px;
+        background: #f5f5f5;
+        border: 1px solid #333;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.5vw;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="outer-container">
+      <p>I am a Paragraph element in a div classed "outer-container, and my font size is set to 20px, and it's a fixed size. My font size will affect the first container's font size.</p>
+      <div class="inner-container">
+        <div class="fixed-width1">
+          <p>
+            I'm a Paragraph with a font size set to 1.5em. This size relates to the parent element.
+          </p>
+        </div>
+        <div class="fixed-width2">
+          <p>
+            I'm a Paragraph with a font size set to 1.5rem. This size relates to the root element - the html.
+          </p>
+        </div>
+        <div class="vw-container">
+          <h1>I'm a Paragraph with a font size set to 1.5vw. This size relates to the viewport width and is changing accordingly.</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
