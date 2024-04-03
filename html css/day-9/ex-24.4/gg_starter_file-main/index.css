@@ -1,0 +1,76 @@
+.container {
+  display: grid;
+  grid-template-areas: 
+  'robot robot trees trees trees child bike bike'
+  'robot robot trees trees trees child bike bike'
+  'sea sea trees trees trees garden garden car'
+  'sea sea salt salt wave garden garden car'
+  'sea sea salt salt pumba pumba pumba car'
+  'air castle castle efi pumba pumba pumba fish'
+  'air castle castle efi pumba pumba pumba fish'
+  'air castle castle efi pumba pumba pumba fish'
+  ;
+  gap: 0.5rem;
+}
+
+.box {
+  padding: 1rem;
+}
+
+.robot {
+  background: url(./img/1.jpeg)no-repeat center center/cover;
+  grid-area: robot;
+
+}
+.trees {
+  background: url(./img/2.jpeg)no-repeat center center/cover;
+  grid-area: trees;
+}
+.child {
+  background: url(./img/3.jpeg)no-repeat center center/cover;
+  grid-area: child;
+}
+.bike {
+  background: url(./img/4.jpeg)no-repeat center center/cover;
+  grid-area: bike;
+}
+.sea {
+  background: url(./img/5.jpeg)no-repeat center center/cover;
+  grid-area: sea;
+}
+.salt {
+  background: url(./img/6.jpeg)no-repeat center center/cover;
+  grid-area: salt;
+}
+.wave {
+  background: url(./img/7.jpeg)no-repeat center center/cover;
+  grid-area: wave;
+}
+.garden {
+  background: url(./img/8.jpeg)no-repeat center center/cover;
+  grid-area: garden;
+}
+.car {
+  background: url(./img/9.jpeg)no-repeat center center/cover;
+  grid-area: car;
+}
+.air {
+  background: url(./img/10.jpeg)no-repeat center center/cover;
+  grid-area: air;
+}
+.castle {
+  background: url(./img/11.jpeg)no-repeat center center/cover;
+  grid-area: castle;
+}
+.efi {
+  background: url(./img/12.jpeg)no-repeat center center/cover;
+  grid-area: efi;
+}
+.pumba {
+  background: url(./img/13.jpeg)no-repeat center center/cover;
+  grid-area: pumba;
+}
+.fish {
+  background: url(./img/14.jpeg)no-repeat center center/cover;
+  grid-area: fish;
+}
