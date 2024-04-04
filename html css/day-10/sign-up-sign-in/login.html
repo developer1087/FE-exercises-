@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 200;
+      background: url(./img/pexels-aviv-perets-19308036.jpg) no-repeat center center/cover;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-container {
+      background: #fff;
+      padding: 2rem 4rem;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .x {
+      text-align: right;
+      color: #999;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background: #999;
+      text-align: center;
+      border-radius: 50%;
+      margin: auto;
+      padding: 20px;
+      
+    }
+
+    h1 {
+      font-weight: 400;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 300;
+      font-size: small;
+    }
+
+    .fb-login {
+      border: 1px solid #999;
+      border-radius: 30px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      padding: 10px 10px;
+      margin-bottom: 0;
+    }
+    .google-login {
+      border: 1px solid #999;
+      border-radius: 30px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      padding: 10px 15px;
+    }
+
+    .fb-login i, .google-login i {
+      padding: 5px;
+    }
+    .fb-login P, .google-login p {
+      font-weight: 400;
+    }
+
+    .or {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: #999;
+      padding: 15px;
+    }
+
+    .or hr {
+      width: 100px;
+      margin: 10px;
+      color: #999;
+    }
+
+    .or h2 {
+      font-weight: 400;
+    }
+
+    .enter {
+      font-size: small;
+      padding-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      color: #999;
+      border-radius: 5px;
+      border: 1px solid #999;
+      opacity: 0.5;
+      margin: 5px;
+      padding: 5px;
+      margin-bottom: 0px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 30px;
+      border: none;
+      background: #999;
+      color: #fff;
+    }
+
+    .forget {
+      position: absolute;
+      color: #999;
+      font-size: small;
+      text-decoration: none;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      right: 50px;
+    }
+
+    .password {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="x"><i class="fa-solid fa-x"></i></div>
+    <div class="circle"></div>
+    <h1>Log in</h1>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+    <div class="fb-login">
+      <i class="fab fa-facebook"></i>
+      <p>Log in with Facebook</p>
+    </div>
+    <div class="google-login">
+      <i class="fab fa-google"></i>
+      <p>Log in with Google</p>
+    </div>
+    <div class="or">
+      <hr><h2>OR</h2><hr>
+    </div>
+    <label for="email">Your email</label><br>
+    <input type="email">
+
+    <div class="password">
+      <label for="password">Your password</label><br>
+      <i class="fa fa-eye-slash" aria-hidden="true"></i>
+    </div>
+    <input type="password">
+    <a href="#" class="forget">forget your password?</a>
+    <br>
+    <button>Log in</button>
+  </div>
+</body>
+</html>
