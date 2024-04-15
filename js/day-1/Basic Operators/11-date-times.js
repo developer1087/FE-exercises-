@@ -32,8 +32,9 @@ const tomorrowsDate = year + "-" + month + "-" + day;
 console.log(tomorrowsDate);
 
 // 9
-const totalMinutes = 90;
-const hour = new Date().getHours(0);
-console.log(hour);
+const totalMinutes = 93;
+const hour = Math.floor(totalMinutes/60);
+const minutes = totalMinutes%60;
 
-console.log(`${totalMinutes} minutes is equivalent to: `);
+
+console.log(`${totalMinutes} minutes is equivalent to: ${hour} hour.s and ${minutes} minutes.`);
