@@ -32,28 +32,33 @@
 
     @keyframes swimLeft {
       0% {
-        transform: translateX(-50x)
+        transform: translateX(100px);
       }
-      10% {
-        transform: translateX(-100px);
-      }
-      20% {
-        transform: translateX(-200px);
-      }
-      30% {
-        transform: translateX(-300px);
-      }
-      40% {
-        transform: rotate(180deg);
+      48% {
+        transform: translateX(200px);
+        transform: rotateY(0deg);
       }
       50% {
-        transform: translateX(50px);
+        transform: rotateY(180deg);
       }
+      68% {
+        transform: rotateY(180deg);
+      }
+      70% {
+        transform: translateX(-100px);
+        
+        transform: rotateY(0deg);
+      }
+
+      80% {
+        transform: translateX(100px);
+      }
+
       }
 
     .fish {
       position: relative;
-      animation: swimLeft 3s ease infinite;
+      animation: swimLeft 5s linear infinite;
     }
 
     .fish-body {
