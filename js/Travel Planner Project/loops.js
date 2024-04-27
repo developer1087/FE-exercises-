@@ -158,35 +158,69 @@ for (let i = 0; i < destinationRatingMatrix.length; i++) {
 }
 console.log(highRatings);
 
+// 13
+const regionRecommendationMatrix13 = [
+  [5, 7],
+  [8, 6],
+  [9, 7],
+];
 
-
-var twoSum = function(nums, target) {
-  let output = [];
-  for (let i = 0; i < nums.length; i++) {
-      for (let j = 0; j < nums.length; j++) {
-          if (i !== j && nums[i] + nums[j] === target) {
-              output.push(i, j);
-              return output;
-          }
-      }
+for (let i = 0; i < regionRecommendationMatrix13.length; i++) {
+  for (let j = 0; j < regionRecommendationMatrix13[i].length; j++) {
+    if (regionRecommendationMatrix13[i][j] < 7) {
+      regionRecommendationMatrix13[i].splice(j,1);
+    }
   }
-};
+}
+console.log(regionRecommendationMatrix13);
+for (region of regionRecommendationMatrix13) {
+  console.log(region.length);
+}
 
-console.log(twoSum([3, 2, 4], 6));
+// 14
+const mustVisitRatingMatrix14 = [
+  [4.5, 4.7],
+  [4.9, 5.0],
+  [4.8, 4.9],
+];
+let mustVisitOnly = [];
+for (let i = 0; i < mustVisitRatingMatrix14.length; i++) {
+  mustVisitOnly.push([]);
+  for (let j = 0; j < mustVisitRatingMatrix14[i].length; j++) {
+    if (mustVisitRatingMatrix14[i][j] > 4.8) {
+      mustVisitOnly[i].push(mustVisitRatingMatrix14[i][j]);
+    }
+  }
+}
+console.log(mustVisitOnly);
 
-var addTwoNumbers = function(l1, l2) {
-  l1 = l1.reverse();
-  l1 = l1.join('');
-  l2 = l2.reverse();
-  l2 = l2.join('');
-  l1 = l1.toString();
-  l2 = l2.toString();
-  l1 = Number.parseInt(l1);
-  l2 = Number.parseInt(l2);
-  let newNum = l1 + l2;
-  let newL = [];
-  newL = newNum.split(',');
-  return newL;
-};
+// var twoSum = function(nums, target) {
+//   let output = [];
+//   for (let i = 0; i < nums.length; i++) {
+//       for (let j = 0; j < nums.length; j++) {
+//           if (i !== j && nums[i] + nums[j] === target) {
+//               output.push(i, j);
+//               return output;
+//           }
+//       }
+//   }
+// };
 
-console.log(addTwoNumbers([1,2,3], [2,3,4])); 
+// console.log(twoSum([3, 2, 4], 6));
+
+// var addTwoNumbers = function(l1, l2) {
+//   l1 = l1.reverse();
+//   l1 = l1.join('');
+//   l2 = l2.reverse();
+//   l2 = l2.join('');
+//   l1 = l1.toString();
+//   l2 = l2.toString();
+//   l1 = Number.parseInt(l1);
+//   l2 = Number.parseInt(l2);
+//   let newNum = l1 + l2;
+//   let newL = [];
+//   newL = newNum.split(',');
+//   return newL;
+// };
+
+// console.log(addTwoNumbers([1,2,3], [2,3,4])); 
