@@ -92,6 +92,19 @@ const travelPlaner = {
   }
 );
 return sorted;
+  }, 
+  editLocation(name, info) {
+    let isPlace = false;
+    for (const place of this.locations) {
+      if (name === place.name) {
+        console.log("Location already exist");
+        isPlace = true;
+        break;
+      }
+    }
+    if (!isPlace) {
+      this.locations.push(info)
+    }
   }
 
 }
@@ -121,3 +134,11 @@ console.log(travelPlaner.sortLocations());
 
 // 6
 
+travelPlaner.editLocation('London', {
+  name: 'London',
+  description: 'The big ben',
+  bestTimeToTravel: 'Fall',
+  localCuisine: 'Fish and Chips'
+});
+
+console.log(travelPlaner);
