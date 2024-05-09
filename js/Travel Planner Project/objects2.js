@@ -6,22 +6,26 @@ const travelPlaner = {
       name: 'Ko phangan',
       description: 'A place in Thailand',
       bestTimeToTravel: 'Summer',
-      localCuisine: 'asian food'
+      localCuisine: 'asian food',
+      rating: [4.5, 4]
     }, {
       name: 'Rodus',
       destination: 'An island in greece',
       bestTimeToTravel: 'Spring',
-      localCuisine: 'Greece food'
+      localCuisine: 'Greece food',
+      rating: [4, 5]
     }, {
       name: 'Paris',
       description: 'Most romantic city',
       bestTimeToTravel: 'Winter',
-      localCuisine: 'French food'
+      localCuisine: 'French food',
+      rating: [5, 4.8]
     }, {
       name: 'New York',
       description: 'The big apple',
       bestTimeToTravel: 'Fall',
-      localCuisine: 'Pizza'
+      localCuisine: 'Pizza',
+      rating: [5, 3]
     }
   ],
   addLocation(nameO, info) {
@@ -105,8 +109,50 @@ return sorted;
     if (!isPlace) {
       this.locations.push(info)
     }
+  },
+  showAll() {
+    for (location of this.locations) {
+      console.log(location.name);
+      console.log(`Also known as the ${location.description}, is best travel at ${location.bestTimeToTravel}, and you should try the ${location.localCuisine}`);
+    }
+  },
+  filterLocation(str) {
+    for (location of this.locations) {
+      if (location.description.includes(str)) {
+        return location;
+      }
+    }
+  },
+  rateLocation(locationName, rating) {
+    for (location of this.locations) {
+      if (locationName === location.name) {
+        location.rating.push(rating);
+        console.log(location.rating);
+      }
+    }
+  }, 
+  getAverageRating(locationName) {
+    for (location of this.locations) {
+      if (locationName === location.name) {
+        let average = (location.rating.reduce((acc, cur) => acc + cur, 0)) / location.rating.length;
+        return average;
+      }
+    }
+  },
+  getTopRatedLocations() {
+    let maxRate = 0;
+    for (const location of this.locations) {
+      if (Array.isArray(location.rating) && location.rating.length > 0) {
+        let avg = (location.rating.reduce((acc, cur) => acc + cur, 0)) / location.rating.length;
+        if (avg > maxRate) {
+          maxRate = avg;
+        }
+      } else {
+        console.log(`Warning: no rating available for ${location.name}`);
+      }
+    }
+    return maxRate;
   }
-
 }
 
 // 2
@@ -142,3 +188,20 @@ travelPlaner.editLocation('London', {
 });
 
 console.log(travelPlaner);
+
+// 7
+
+console.log(travelPlaner.showAll());
+
+// 8
+
+console.log(travelPlaner.filterLocation("romantic"));
+
+// 9
+
+travelPlaner.rateLocation('Rodus', 5)
+console.log(travelPlaner.getAverageRating('Paris')); 
+
+// 10
+
+console.log(travelPlaner.getTopRatedLocations());
