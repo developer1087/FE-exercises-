@@ -20,7 +20,7 @@ function totalTime(arr) {
   }
   console.log(Math.floor(hoursSum));
 }
-totalTime(destinations1);
+// totalTime(destinations1);
 
 // 2. Find Longest Travel Route
 const destinations2 = [
@@ -53,7 +53,7 @@ function theLongestRoute(destinationsL) {
   }
   return longRoutes;
 }
-console.log(theLongestRoute(destinations2)); 
+// console.log(theLongestRoute(destinations2)); 
 
 // 3. Sort Destinations by Distance
 const destinations3 = [
@@ -73,19 +73,21 @@ const destinations3 = [
   },
 ];
 
-function sortByDistance(arr) {
-
-  let sumOfDistance = [];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].routes.length; j+=2) {
-      sumOfDistance.push(arr[i].routes[j].distance + arr[i].routes[j+1].distance)
+function sortByDistanceSum(destinations) {
+  for (let i = 0; i < destinations.length; i++) {
+    let sum = 0;
+    for (let j = 0; j < destinations[i].routes.length; j++) {
+      sum += destinations[i].routes[j].distance;
     }
+    destinations[i].sumDistance = sum;
   }
-  arr.function (sumOfDistance[i], sumOfDistance[i+1]) => a - b;
-  return sumOfDistance;
+
+  destinations.sort((a, b) => a.sumDistance - b.sumDistance);
+
+  return destinations;
 }
 
-console.log(sortByDistance(destinations3));
+console.log(sortByDistanceSum(destinations3));
 
 // 4. Travel Itinerary
 const destinations4 = [
@@ -95,6 +97,21 @@ const destinations4 = [
 ];
 const start4 = 'Paris';
 
+function connectionsItineraryBuilder(destinationsArr, start) {
+  let allDestinationsArr = [];
+  for (const destination of destinationsArr) {
+    allDestinationsArr.push(destination.name);
+  }
+  for (const destination of destinationsArr) {
+    for (const connection of destination.connections) {
+      allDestinationsArr.push(connection);
+    }
+  }
+  const set1 = new Set(allDestinationsArr);
+  return ([...set1])
+}
+
+console.log(connectionsItineraryBuilder(destinations4));
 // 5. Least Number of Connections
 const destinations5 = [
   {
@@ -104,3 +121,19 @@ const destinations5 = [
   { name: 'London', connections: ['New York'] },
   { name: 'New York', connections: [] },
 ];
+
+function findLeastConnections(arr) {
+  let minConnectionArrLen = arr[0].connections.length;
+  for (const destination of arr) {
+    if (destination.connections.length < minConnectionArrLen) {
+      minConnectionArrLen = destination.connections.length;
+    }
+  }
+  for (const destination of arr) {
+    if (destination.connections.length === minConnectionArrLen) {
+      return destination.name
+    }
+  }
+}
+
+console.log(findLeastConnections(destinations5));
