@@ -34,7 +34,7 @@ const getFlightDurationInSeconds = duration => {
  
 function durationSum(arr) {
   let secondsArr = [];
-  for (destination of arr.flights) {
+  for (const destination of arr.flights) {
     const durationInSeconds = getFlightDurationInSeconds(destination.duration);
     secondsArr.push(durationInSeconds);
   }
